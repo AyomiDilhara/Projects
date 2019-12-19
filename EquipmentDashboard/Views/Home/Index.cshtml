@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model EquipmentDashboard.Models.ProcessedResult
+
+    <div class="equBorder">
+        <h3>Equipment Dashboard</h3>
+        <div class="row margintopbot">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 paddingZero">
+                <span class="text1">Operational</span><br/>
+                <span class="text2">@Model.operatinalCount</span>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 paddingZero">
+                <span class="text1">Non - Operational</span><br />
+                <span class="text2">@Model.nonOperatinalCount</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="box">
+                @for (var i = 0; i < 5; i++)
+                {
+                    var height = @Model.keyValues[@Model.keys[i]];
+
+                    <div class="equipment">
+                        <div class="graph" style="height:@(height)%;"></div>
+                        <div class="name">@Model.keys[i]</div>
+                    </div>
+                }
+            </div>
+            <div class="equtext">
+                <span>Equipment Type</span>
+            </div>
+        </div>
+    </div>

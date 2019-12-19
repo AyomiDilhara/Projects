@@ -1,0 +1,115 @@
+﻿/*Style Sheet added by Ayomi*/
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-light .navbar-brand {
+    color: #004085;
+    font-weight: 500;
+}
+.equBorder {
+    border: solid 0.5px #ddd;
+    padding: 4em;
+    margin: 1em 0em 2em 0em;
+}
+
+    .equBorder h3 {
+        font-weight: 300;
+        color: #004085;
+    }
+
+.section {
+    width: 100%;
+    height: 90vh;
+    border: 0.05em solid #ddd;
+}
+
+.box {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 532px;
+    height: 300px;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: flex;
+}
+
+    .box .equipment {
+        position:relative;
+        flex:1;
+        text-align:center;
+    }
+
+        .box .equipment .graph {
+            position:absolute;
+            width:40px;
+            background: rgba(0,0,0,1);
+            bottom: 0;
+            left:50%;
+            transform:translateX(-50%)
+        }
+            .box .equipment .graph::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 0;
+                background: linear-gradient(0deg, #dc3545, #ec6b77);
+            }
+
+            .box .equipment .graph::after {
+                content: '';
+                position: absolute;
+                top:0;
+                right:0;
+                width:50%;
+                height:100%;
+                background:rgba(255,255,255,.1);
+
+            }
+        .box .equipment .graph .name{
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            text-align:center;
+            color:#fff;
+            font-weight:bold;
+
+        }
+
+.name {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.margintopbot {
+    margin: 2em 0em;
+}
+
+.equtext {
+    text-align: center;
+    padding: 2em 0em 0em 0em;
+}
+
+.paddingZero {
+    padding:0;
+}
+
+.text1 {
+    font-size: 1.5em;
+    color: #222;    
+    font-weight: bold;
+}
+
+.text2 {
+    font-size: 1.5em;    
+    color: #dc3545;
+    font-weight: bold;
+}
